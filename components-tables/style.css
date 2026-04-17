@@ -21,6 +21,24 @@
     --color-neutral-200: #E6E6E6;
     --color-neutral-100: #F5F5F5;
     --color-neutral-50:  #FAFAFA;
+
+    --color-brand-900: #0B0F28;
+    --color-brand-800: #131B53;
+    --color-brand-700: #172582;
+    --color-brand-600: #1A2EB2;
+    --color-brand-500: #213ADE;
+    --color-brand-400: #6778E5;
+    --color-brand-300: #AEB6EA;
+    --color-brand-200: #DADDF1;
+    --color-brand-100: #F1F2F8;
+    --color-brand-50:  #F9F9FB;
+
+    /* Column widths */
+    --w-plan:  minmax(180px, 1fr);
+    --w-bool:  0px;
+    --w-img:   0px;
+    --w-url:   0px;
+    --w-email: 0px;
 }
 
 /* Hide radio inputs */
@@ -29,52 +47,121 @@ input[type="radio"][name="content-length"] {
 }
 
 body {
-    padding: 80px 16px 40px;
+    padding: 24px 24px 120px 24px;
     background: var(--color-white);
 }
 
-/* Controls */
+/* ─── Controls — dark, bottom-right ────────── */
 
 .controls {
     position: fixed;
-    top: 20px;
+    bottom: 24px;
     right: 24px;
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--color-neutral-200);
-    border-radius: 8px;
-    overflow: hidden;
-    background: var(--color-white);
+    background: #1A1A1A;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     z-index: 100;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    width: 158px;
 }
 
-.controls label {
-    padding: 6px 14px;
+/* Content length segment */
+.controls-segment {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.controls-segment label {
+    flex: 1;
+    padding: 8px 0;
     font-size: 13px;
-    color: var(--color-neutral-500);
+    color: rgba(255, 255, 255, 0.55);
     cursor: pointer;
-    border-right: 1px solid var(--color-neutral-200);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
     white-space: nowrap;
+    text-align: center;
     line-height: 20px;
 }
 
-.controls label:last-child {
+.controls-segment label:last-child {
     border-right: none;
 }
 
-#opt-short:checked ~ .controls label[for="opt-short"],
-#opt-medium:checked ~ .controls label[for="opt-medium"],
-#opt-long:checked ~ .controls label[for="opt-long"] {
-    background: var(--color-neutral-100);
-    color: var(--color-neutral-900);
+#opt-short:checked  ~ .controls .controls-segment label[for="opt-short"],
+#opt-medium:checked ~ .controls .controls-segment label[for="opt-medium"],
+#opt-long:checked   ~ .controls .controls-segment label[for="opt-long"] {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
 }
 
-/* Content visibility */
+/* Data types section */
+.controls-types {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.controls-types-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+/* Switch */
+.switch-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    user-select: none;
+}
+
+.switch-label input[type="checkbox"] {
+    display: none;
+}
+
+.switch {
+    flex-shrink: 0;
+    width: 28px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    position: relative;
+    transition: background 0.15s;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: transform 0.15s, background 0.15s;
+}
+
+.switch-label:has(input:checked) .switch {
+    background: var(--color-brand-500);
+}
+
+.switch-label:has(input:checked) .switch::after {
+    background: white;
+    transform: translateX(12px);
+}
+
+/* ─── Content visibility ────────────────────── */
 
 .s, .l { display: none; }
-.m { display: inline; }
+.m      { display: inline; }
 
 body:has(#opt-short:checked) .s { display: inline; }
 body:has(#opt-short:checked) .m,
@@ -84,7 +171,7 @@ body:has(#opt-long:checked) .l { display: inline; }
 body:has(#opt-long:checked) .s,
 body:has(#opt-long:checked) .m { display: none; }
 
-/* Section */
+/* ─── Section ───────────────────────────────── */
 
 .section {
     margin-bottom: 40px;
@@ -97,10 +184,9 @@ body:has(#opt-long:checked) .m { display: none; }
     margin-bottom: 24px;
 }
 
-/* Table base */
+/* ─── Table base ────────────────────────────── */
 
 .table-wrapper {
-    position: relative;
     width: 100%;
     overflow-x: auto;
     border: 1px solid var(--color-neutral-200);
@@ -108,11 +194,15 @@ body:has(#opt-long:checked) .m { display: none; }
     background: var(--color-white);
 }
 
-
 .table {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
-    min-width: 640px;
+    grid-template-columns:
+        minmax(180px, 1fr)
+        var(--w-plan) var(--w-plan) var(--w-plan)
+        var(--w-bool)
+        var(--w-img)
+        var(--w-url)
+        var(--w-email);
 }
 
 .tr {
@@ -124,7 +214,7 @@ body:has(#opt-long:checked) .m { display: none; }
     border-bottom: 1px solid var(--color-neutral-200);
     font-size: 14px;
     line-height: 20px;
-    color: var(--color-neutral-900);
+    color: var(--color-neutral-600);
     background: var(--color-white);
 }
 
@@ -138,7 +228,91 @@ body:has(#opt-long:checked) .m { display: none; }
     border-bottom: none;
 }
 
-/* Striped rows */
+/* ─── Column toggling ───────────────────────── */
+
+/* Hidden state — .tr prefix matches specificity of .tr .td (020) so padding: 0 wins */
+.tr .dt-bool,
+.tr .dt-img,
+.tr .dt-url,
+.tr .dt-email {
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Column widths */
+body:has(#dt-bool:checked)  { --w-bool:  minmax(120px, 1fr); }
+body:has(#dt-img:checked)   { --w-img:   minmax(100px, 1fr); }
+body:has(#dt-url:checked)   { --w-url:   minmax(200px, 1fr); }
+body:has(#dt-email:checked) { --w-email: minmax(190px, 1fr); }
+
+/* Reveal when switch is on */
+body:has(#dt-bool:checked)  .tr .dt-bool,
+body:has(#dt-img:checked)   .tr .dt-img,
+body:has(#dt-url:checked)   .tr .dt-url,
+body:has(#dt-email:checked) .tr .dt-email {
+    padding: 12px 16px;
+    overflow: visible;
+}
+
+/* ─── Data type cell styles ─────────────────── */
+
+/* Image */
+.dt-img img {
+    display: block;
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+}
+
+/* URL */
+.dt-url a {
+    color: var(--color-brand-500);
+    text-decoration: underline;
+}
+
+.dt-url a:hover {
+    color: var(--color-brand-600);
+}
+
+/* Email */
+.dt-email a {
+    color: var(--color-neutral-600);
+    text-decoration: underline;
+}
+
+.dt-email a:hover {
+    color: var(--color-neutral-500);
+}
+
+/* Boolean */
+.bool-true {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 320px;
+    border: 1px solid #DCFCDE;
+    background: #F0FDF1;
+    color: #24a92a;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.bool-false {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 320px;
+    border: 1px solid #FFEBD5;
+    background: #FFF7ED;
+    color: #f78503;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+/* ─── Striped rows ──────────────────────────── */
 
 .table-wrapper.striped .tr:not(.header):nth-child(odd) .td {
     background: var(--color-neutral-50);
@@ -148,7 +322,7 @@ body:has(#opt-long:checked) .m { display: none; }
     background: var(--color-white);
 }
 
-/* Vertical lines */
+/* ─── Vertical lines ────────────────────────── */
 
 .table-wrapper.vertical-lines .tr .td {
     border-right: 1px solid var(--color-neutral-200);
@@ -158,14 +332,10 @@ body:has(#opt-long:checked) .m { display: none; }
     border-right: none;
 }
 
-/* Modifiers */
+/* ─── Modifiers ─────────────────────────────── */
 
 .table-wrapper.borderless {
     border: none;
-    border-radius: 0;
-}
-
-.table-wrapper.borderless::after {
     border-radius: 0;
 }
 
