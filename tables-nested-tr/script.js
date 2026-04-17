@@ -62,13 +62,29 @@ document.addEventListener('DOMContentLoaded', () => {
         selectCell(cell);
     });
 
+    const headerIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+  <rect width="11.9997" height="11.9997" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.03115 3.25254C8.09447 3.09967 8.24364 3 8.4091 3H10.5909C10.7564 3 10.9055 3.09967 10.9688 3.25254C11.0322 3.4054 10.9972 3.58136 10.8802 3.69836L9.78927 4.78926C9.62951 4.94902 9.37049 4.94902 9.21073 4.78926L8.11983 3.69836C8.00283 3.58136 7.96783 3.4054 8.03115 3.25254ZM9.39672 3.81818L9.5 3.92145L9.60328 3.81818H9.39672Z" fill="#535353"/>
+  <path d="M9.5 3.92145L9.39672 3.81818H9.60328L9.5 3.92145Z" fill="#535353"/>
+  <path d="M1 3.95453H6.5" stroke="#535353" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1 8.57953H6.5" stroke="#A3A3A3" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
+    const contentIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+  <rect width="11.9997" height="11.9997" fill="white"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.03115 3.25254C8.09447 3.09967 8.24364 3 8.4091 3H10.5909C10.7564 3 10.9055 3.09967 10.9688 3.25254C11.0322 3.4054 10.9972 3.58136 10.8802 3.69836L9.78927 4.78926C9.62951 4.94902 9.37049 4.94902 9.21073 4.78926L8.11983 3.69836C8.00283 3.58136 7.96783 3.4054 8.03115 3.25254ZM9.39672 3.81818L9.5 3.92145L9.60328 3.81818H9.39672Z" fill="#A3A3A3"/>
+  <path d="M9.5 3.92145L9.39672 3.81818H9.60328L9.5 3.92145Z" fill="#A3A3A3"/>
+  <path d="M1 3.95453H6.5" stroke="#A3A3A3" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1 8.57953H6.5" stroke="#535353" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>`;
+
     function addFaqItem(btn) {
         const tbody = btn.previousElementSibling.querySelector('tbody');
         const count = tbody.querySelectorAll('.faq-row-header').length + 1;
         const headerRow = document.createElement('tr');
-        headerRow.innerHTML = `<td class="faq-row-header" contenteditable="true" data-placeholder="Header ${count}"></td>`;
+        headerRow.innerHTML = `<td class="faq-row-header">${headerIcon}<span contenteditable="true" data-placeholder="Header ${count}"></span></td>`;
         const contentRow = document.createElement('tr');
-        contentRow.innerHTML = `<td class="faq-row-content" contenteditable="true" data-placeholder="Content ${count}"></td>`;
+        contentRow.innerHTML = `<td class="faq-row-content">${contentIcon}<span contenteditable="true" data-placeholder="Content ${count}"></span></td>`;
         tbody.appendChild(headerRow);
         tbody.appendChild(contentRow);
         requestAnimationFrame(() => requestAnimationFrame(updateRowHeights));

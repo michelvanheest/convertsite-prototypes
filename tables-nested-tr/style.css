@@ -167,10 +167,25 @@ td:hover {
     border-bottom: 1px solid var(--color-neutral-200);
     padding: 6px 8px;
     vertical-align: top;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
 }
 
 .faq-inner td:hover {
     background-color: transparent;
+}
+
+.faq-inner td svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.faq-inner td span[contenteditable] {
+    flex: 1;
+    min-width: 0;
+    outline: none;
+    word-break: break-word;
 }
 
 .faq-row-header {
@@ -181,7 +196,7 @@ td:hover {
     color: var(--color-neutral-600);
 }
 
-.faq-inner td[contenteditable]:empty::before {
+.faq-inner td span[contenteditable]:empty::before {
     content: attr(data-placeholder);
     color: var(--color-neutral-400);
     pointer-events: none;
