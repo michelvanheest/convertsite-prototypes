@@ -74,7 +74,7 @@ th, td {
 
 th:not(.corner-header),
 td:not(.row-number) {
-    min-width: 120px;
+    min-width: 200px;
 }
 
 .cell-content {
@@ -186,6 +186,9 @@ td:hover {
     min-width: 0;
     outline: none;
     word-break: break-word;
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .faq-row-header {
