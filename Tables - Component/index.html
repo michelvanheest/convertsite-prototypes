@@ -1,0 +1,280 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+
+        <!-- Radio inputs — drive content switching via CSS :has() -->
+        <input type="radio" id="opt-short" name="content-length">
+        <input type="radio" id="opt-medium" name="content-length" checked>
+        <input type="radio" id="opt-long" name="content-length">
+
+        <!-- Controls -->
+        <div class="controls">
+            <label for="opt-short">Short</label>
+            <label for="opt-medium">Medium</label>
+            <label for="opt-long">Long</label>
+        </div>
+
+        <!-- Vertical lines -->
+        <div class="section">
+            <div class="section-title">Vertical lines</div>
+            <div class="table-outer">
+            <div class="table-wrapper vertical-lines borderless no-header-bg">
+                <div class="table">
+                    <div class="tr header">
+                        <div class="td">Feature</div>
+                        <div class="td">Starter</div>
+                        <div class="td">Builder</div>
+                        <div class="td">Business</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Domain</span><span class="m">Custom domain</span><span class="l">Custom domain setup</span></div>
+                        <div class="td"><span class="s">—</span><span class="m">Not included</span><span class="l">Not available on this plan — upgrade to Builder or higher to use a custom domain</span></div>
+                        <div class="td"><span class="s">1 domain</span><span class="m">1 domain included</span><span class="l">Include one custom domain to give your calculator a branded, professional URL</span></div>
+                        <div class="td"><span class="s">Up to 5</span><span class="m">Up to 5 domains</span><span class="l">Connect up to five custom domains across your different products and marketing campaigns</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Integrations</span><span class="m">Integrations</span><span class="l">External integrations</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No integrations</span><span class="l">No third-party integrations are supported on the Starter plan</span></div>
+                        <div class="td"><span class="s">API key</span><span class="m">Connect via API</span><span class="l">Connect external services using a personal API key with our REST API</span></div>
+                        <div class="td"><span class="s">Full</span><span class="m">Native + full API</span><span class="l">Native integrations with tools like Zapier and HubSpot, plus full REST API and webhook support</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">AI credits</span><span class="m">AI credits / month</span><span class="l">Monthly AI credits</span></div>
+                        <div class="td"><span class="s">500/mo</span><span class="m">500 credits / month</span><span class="l">500 AI credits per month, shared across all calculators on your account</span></div>
+                        <div class="td"><span class="s">1K/mo</span><span class="m">1,000 credits / month</span><span class="l">1,000 AI credits per month — sufficient for most mid-traffic projects and calculators</span></div>
+                        <div class="td"><span class="s">2.5K/mo</span><span class="m">2,500 credits / month</span><span class="l">2,500 AI credits per month with the option to purchase additional credit bundles as needed</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Branding</span><span class="m">Branding</span><span class="l">Branding &amp; white-label</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite logo is permanently shown on all your published calculators</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite branding remains visible on all calculators and cannot be hidden on this plan</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No branding</span><span class="l">Fully white-label — remove all ConvertSite branding and present your calculators under your own company name and logo</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Team</span><span class="m">Team members</span><span class="l">Team &amp; collaboration</span></div>
+                        <div class="td"><span class="s">1 user</span><span class="m">1 user only</span><span class="l">Single-user account — no collaboration features or team access are included</span></div>
+                        <div class="td"><span class="s">3 users</span><span class="m">Up to 3 members</span><span class="l">Invite up to three team members to collaborate on calculators and share workspaces</span></div>
+                        <div class="td"><span class="s">Unlimited</span><span class="m">Unlimited members</span><span class="l">Unlimited team members with role-based permissions, activity logs, and workspace management</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Support</span><span class="m">Support</span><span class="l">Customer support</span></div>
+                        <div class="td"><span class="s">Forum</span><span class="m">Community forum</span><span class="l">Access our public documentation and community forum for self-service support only</span></div>
+                        <div class="td"><span class="s">Email</span><span class="m">Email support</span><span class="l">Email support included with a guaranteed response within two business days</span></div>
+                        <div class="td"><span class="s">Priority</span><span class="m">Priority support</span><span class="l">Dedicated account manager, priority ticket queue, and optional onboarding session with our team</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Analytics</span><span class="m">Analytics</span><span class="l">Analytics &amp; reporting</span></div>
+                        <div class="td"><span class="s">Basic</span><span class="m">Page views only</span><span class="l">View basic traffic metrics including total page views and unique visitors per calculator</span></div>
+                        <div class="td"><span class="s">Standard</span><span class="m">Conversion tracking</span><span class="l">Track conversions, user drop-off, and step-by-step funnel performance across your calculators</span></div>
+                        <div class="td"><span class="s">Advanced</span><span class="m">Full analytics</span><span class="l">Advanced reporting dashboard with custom KPI configuration, audience segments, and scheduled email reports</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Export</span><span class="m">Export formats</span><span class="l">Data export</span></div>
+                        <div class="td"><span class="s">PDF</span><span class="m">PDF only</span><span class="l">Download calculator results as a formatted PDF document — no other export options are available</span></div>
+                        <div class="td"><span class="s">PDF, CSV</span><span class="m">PDF and CSV</span><span class="l">Export your data as a clean PDF report or a structured CSV file ready for spreadsheet tools</span></div>
+                        <div class="td"><span class="s">All formats</span><span class="m">PDF, CSV, Excel, JSON</span><span class="l">Export in any format you need: PDF, CSV, Microsoft Excel (.xlsx), or raw JSON for developer and API use</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card -->
+        <div class="section">
+            <div class="section-title">Card</div>
+            <div class="table-outer">
+            <div class="table-wrapper">
+                <div class="table">
+                    <div class="tr header">
+                        <div class="td">Feature</div>
+                        <div class="td">Starter</div>
+                        <div class="td">Builder</div>
+                        <div class="td">Business</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Domain</span><span class="m">Custom domain</span><span class="l">Custom domain setup</span></div>
+                        <div class="td"><span class="s">—</span><span class="m">Not included</span><span class="l">Not available on this plan — upgrade to Builder or higher to use a custom domain</span></div>
+                        <div class="td"><span class="s">1 domain</span><span class="m">1 domain included</span><span class="l">Include one custom domain to give your calculator a branded, professional URL</span></div>
+                        <div class="td"><span class="s">Up to 5</span><span class="m">Up to 5 domains</span><span class="l">Connect up to five custom domains across your different products and marketing campaigns</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Integrations</span><span class="m">Integrations</span><span class="l">External integrations</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No integrations</span><span class="l">No third-party integrations are supported on the Starter plan</span></div>
+                        <div class="td"><span class="s">API key</span><span class="m">Connect via API</span><span class="l">Connect external services using a personal API key with our REST API</span></div>
+                        <div class="td"><span class="s">Full</span><span class="m">Native + full API</span><span class="l">Native integrations with tools like Zapier and HubSpot, plus full REST API and webhook support</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">AI credits</span><span class="m">AI credits / month</span><span class="l">Monthly AI credits</span></div>
+                        <div class="td"><span class="s">500/mo</span><span class="m">500 credits / month</span><span class="l">500 AI credits per month, shared across all calculators on your account</span></div>
+                        <div class="td"><span class="s">1K/mo</span><span class="m">1,000 credits / month</span><span class="l">1,000 AI credits per month — sufficient for most mid-traffic projects and calculators</span></div>
+                        <div class="td"><span class="s">2.5K/mo</span><span class="m">2,500 credits / month</span><span class="l">2,500 AI credits per month with the option to purchase additional credit bundles as needed</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Branding</span><span class="m">Branding</span><span class="l">Branding &amp; white-label</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite logo is permanently shown on all your published calculators</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite branding remains visible on all calculators and cannot be hidden on this plan</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No branding</span><span class="l">Fully white-label — remove all ConvertSite branding and present your calculators under your own company name and logo</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Team</span><span class="m">Team members</span><span class="l">Team &amp; collaboration</span></div>
+                        <div class="td"><span class="s">1 user</span><span class="m">1 user only</span><span class="l">Single-user account — no collaboration features or team access are included</span></div>
+                        <div class="td"><span class="s">3 users</span><span class="m">Up to 3 members</span><span class="l">Invite up to three team members to collaborate on calculators and share workspaces</span></div>
+                        <div class="td"><span class="s">Unlimited</span><span class="m">Unlimited members</span><span class="l">Unlimited team members with role-based permissions, activity logs, and workspace management</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Support</span><span class="m">Support</span><span class="l">Customer support</span></div>
+                        <div class="td"><span class="s">Forum</span><span class="m">Community forum</span><span class="l">Access our public documentation and community forum for self-service support only</span></div>
+                        <div class="td"><span class="s">Email</span><span class="m">Email support</span><span class="l">Email support included with a guaranteed response within two business days</span></div>
+                        <div class="td"><span class="s">Priority</span><span class="m">Priority support</span><span class="l">Dedicated account manager, priority ticket queue, and optional onboarding session with our team</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Analytics</span><span class="m">Analytics</span><span class="l">Analytics &amp; reporting</span></div>
+                        <div class="td"><span class="s">Basic</span><span class="m">Page views only</span><span class="l">View basic traffic metrics including total page views and unique visitors per calculator</span></div>
+                        <div class="td"><span class="s">Standard</span><span class="m">Conversion tracking</span><span class="l">Track conversions, user drop-off, and step-by-step funnel performance across your calculators</span></div>
+                        <div class="td"><span class="s">Advanced</span><span class="m">Full analytics</span><span class="l">Advanced reporting dashboard with custom KPI configuration, audience segments, and scheduled email reports</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Export</span><span class="m">Export formats</span><span class="l">Data export</span></div>
+                        <div class="td"><span class="s">PDF</span><span class="m">PDF only</span><span class="l">Download calculator results as a formatted PDF document — no other export options are available</span></div>
+                        <div class="td"><span class="s">PDF, CSV</span><span class="m">PDF and CSV</span><span class="l">Export your data as a clean PDF report or a structured CSV file ready for spreadsheet tools</span></div>
+                        <div class="td"><span class="s">All formats</span><span class="m">PDF, CSV, Excel, JSON</span><span class="l">Export in any format you need: PDF, CSV, Microsoft Excel (.xlsx), or raw JSON for developer and API use</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card, vertical lines -->
+        <div class="section">
+            <div class="section-title">Card, vertical lines</div>
+            <div class="table-outer">
+            <div class="table-wrapper vertical-lines">
+                <div class="table">
+                    <div class="tr header">
+                        <div class="td">Feature</div>
+                        <div class="td">Starter</div>
+                        <div class="td">Builder</div>
+                        <div class="td">Business</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Domain</span><span class="m">Custom domain</span><span class="l">Custom domain setup</span></div>
+                        <div class="td"><span class="s">—</span><span class="m">Not included</span><span class="l">Not available on this plan — upgrade to Builder or higher to use a custom domain</span></div>
+                        <div class="td"><span class="s">1 domain</span><span class="m">1 domain included</span><span class="l">Include one custom domain to give your calculator a branded, professional URL</span></div>
+                        <div class="td"><span class="s">Up to 5</span><span class="m">Up to 5 domains</span><span class="l">Connect up to five custom domains across your different products and marketing campaigns</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Integrations</span><span class="m">Integrations</span><span class="l">External integrations</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No integrations</span><span class="l">No third-party integrations are supported on the Starter plan</span></div>
+                        <div class="td"><span class="s">API key</span><span class="m">Connect via API</span><span class="l">Connect external services using a personal API key with our REST API</span></div>
+                        <div class="td"><span class="s">Full</span><span class="m">Native + full API</span><span class="l">Native integrations with tools like Zapier and HubSpot, plus full REST API and webhook support</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">AI credits</span><span class="m">AI credits / month</span><span class="l">Monthly AI credits</span></div>
+                        <div class="td"><span class="s">500/mo</span><span class="m">500 credits / month</span><span class="l">500 AI credits per month, shared across all calculators on your account</span></div>
+                        <div class="td"><span class="s">1K/mo</span><span class="m">1,000 credits / month</span><span class="l">1,000 AI credits per month — sufficient for most mid-traffic projects and calculators</span></div>
+                        <div class="td"><span class="s">2.5K/mo</span><span class="m">2,500 credits / month</span><span class="l">2,500 AI credits per month with the option to purchase additional credit bundles as needed</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Branding</span><span class="m">Branding</span><span class="l">Branding &amp; white-label</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite logo is permanently shown on all your published calculators</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite branding remains visible on all calculators and cannot be hidden on this plan</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No branding</span><span class="l">Fully white-label — remove all ConvertSite branding and present your calculators under your own company name and logo</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Team</span><span class="m">Team members</span><span class="l">Team &amp; collaboration</span></div>
+                        <div class="td"><span class="s">1 user</span><span class="m">1 user only</span><span class="l">Single-user account — no collaboration features or team access are included</span></div>
+                        <div class="td"><span class="s">3 users</span><span class="m">Up to 3 members</span><span class="l">Invite up to three team members to collaborate on calculators and share workspaces</span></div>
+                        <div class="td"><span class="s">Unlimited</span><span class="m">Unlimited members</span><span class="l">Unlimited team members with role-based permissions, activity logs, and workspace management</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Support</span><span class="m">Support</span><span class="l">Customer support</span></div>
+                        <div class="td"><span class="s">Forum</span><span class="m">Community forum</span><span class="l">Access our public documentation and community forum for self-service support only</span></div>
+                        <div class="td"><span class="s">Email</span><span class="m">Email support</span><span class="l">Email support included with a guaranteed response within two business days</span></div>
+                        <div class="td"><span class="s">Priority</span><span class="m">Priority support</span><span class="l">Dedicated account manager, priority ticket queue, and optional onboarding session with our team</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Analytics</span><span class="m">Analytics</span><span class="l">Analytics &amp; reporting</span></div>
+                        <div class="td"><span class="s">Basic</span><span class="m">Page views only</span><span class="l">View basic traffic metrics including total page views and unique visitors per calculator</span></div>
+                        <div class="td"><span class="s">Standard</span><span class="m">Conversion tracking</span><span class="l">Track conversions, user drop-off, and step-by-step funnel performance across your calculators</span></div>
+                        <div class="td"><span class="s">Advanced</span><span class="m">Full analytics</span><span class="l">Advanced reporting dashboard with custom KPI configuration, audience segments, and scheduled email reports</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Export</span><span class="m">Export formats</span><span class="l">Data export</span></div>
+                        <div class="td"><span class="s">PDF</span><span class="m">PDF only</span><span class="l">Download calculator results as a formatted PDF document — no other export options are available</span></div>
+                        <div class="td"><span class="s">PDF, CSV</span><span class="m">PDF and CSV</span><span class="l">Export your data as a clean PDF report or a structured CSV file ready for spreadsheet tools</span></div>
+                        <div class="td"><span class="s">All formats</span><span class="m">PDF, CSV, Excel, JSON</span><span class="l">Export in any format you need: PDF, CSV, Microsoft Excel (.xlsx), or raw JSON for developer and API use</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Striped rows -->
+        <div class="section">
+            <div class="section-title">Striped rows</div>
+            <div class="table-outer">
+            <div class="table-wrapper striped borderless">
+                <div class="table">
+                    <div class="tr header">
+                        <div class="td">Feature</div>
+                        <div class="td">Starter</div>
+                        <div class="td">Builder</div>
+                        <div class="td">Business</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Domain</span><span class="m">Custom domain</span><span class="l">Custom domain setup</span></div>
+                        <div class="td"><span class="s">—</span><span class="m">Not included</span><span class="l">Not available on this plan — upgrade to Builder or higher to use a custom domain</span></div>
+                        <div class="td"><span class="s">1 domain</span><span class="m">1 domain included</span><span class="l">Include one custom domain to give your calculator a branded, professional URL</span></div>
+                        <div class="td"><span class="s">Up to 5</span><span class="m">Up to 5 domains</span><span class="l">Connect up to five custom domains across your different products and marketing campaigns</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Integrations</span><span class="m">Integrations</span><span class="l">External integrations</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No integrations</span><span class="l">No third-party integrations are supported on the Starter plan</span></div>
+                        <div class="td"><span class="s">API key</span><span class="m">Connect via API</span><span class="l">Connect external services using a personal API key with our REST API</span></div>
+                        <div class="td"><span class="s">Full</span><span class="m">Native + full API</span><span class="l">Native integrations with tools like Zapier and HubSpot, plus full REST API and webhook support</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">AI credits</span><span class="m">AI credits / month</span><span class="l">Monthly AI credits</span></div>
+                        <div class="td"><span class="s">500/mo</span><span class="m">500 credits / month</span><span class="l">500 AI credits per month, shared across all calculators on your account</span></div>
+                        <div class="td"><span class="s">1K/mo</span><span class="m">1,000 credits / month</span><span class="l">1,000 AI credits per month — sufficient for most mid-traffic projects and calculators</span></div>
+                        <div class="td"><span class="s">2.5K/mo</span><span class="m">2,500 credits / month</span><span class="l">2,500 AI credits per month with the option to purchase additional credit bundles as needed</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Branding</span><span class="m">Branding</span><span class="l">Branding &amp; white-label</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite logo is permanently shown on all your published calculators</span></div>
+                        <div class="td"><span class="s">CC logo</span><span class="m">ConvertSite logo</span><span class="l">The ConvertSite branding remains visible on all calculators and cannot be hidden on this plan</span></div>
+                        <div class="td"><span class="s">None</span><span class="m">No branding</span><span class="l">Fully white-label — remove all ConvertSite branding and present your calculators under your own company name and logo</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Team</span><span class="m">Team members</span><span class="l">Team &amp; collaboration</span></div>
+                        <div class="td"><span class="s">1 user</span><span class="m">1 user only</span><span class="l">Single-user account — no collaboration features or team access are included</span></div>
+                        <div class="td"><span class="s">3 users</span><span class="m">Up to 3 members</span><span class="l">Invite up to three team members to collaborate on calculators and share workspaces</span></div>
+                        <div class="td"><span class="s">Unlimited</span><span class="m">Unlimited members</span><span class="l">Unlimited team members with role-based permissions, activity logs, and workspace management</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Support</span><span class="m">Support</span><span class="l">Customer support</span></div>
+                        <div class="td"><span class="s">Forum</span><span class="m">Community forum</span><span class="l">Access our public documentation and community forum for self-service support only</span></div>
+                        <div class="td"><span class="s">Email</span><span class="m">Email support</span><span class="l">Email support included with a guaranteed response within two business days</span></div>
+                        <div class="td"><span class="s">Priority</span><span class="m">Priority support</span><span class="l">Dedicated account manager, priority ticket queue, and optional onboarding session with our team</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Analytics</span><span class="m">Analytics</span><span class="l">Analytics &amp; reporting</span></div>
+                        <div class="td"><span class="s">Basic</span><span class="m">Page views only</span><span class="l">View basic traffic metrics including total page views and unique visitors per calculator</span></div>
+                        <div class="td"><span class="s">Standard</span><span class="m">Conversion tracking</span><span class="l">Track conversions, user drop-off, and step-by-step funnel performance across your calculators</span></div>
+                        <div class="td"><span class="s">Advanced</span><span class="m">Full analytics</span><span class="l">Advanced reporting dashboard with custom KPI configuration, audience segments, and scheduled email reports</span></div>
+                    </div>
+                    <div class="tr">
+                        <div class="td"><span class="s">Export</span><span class="m">Export formats</span><span class="l">Data export</span></div>
+                        <div class="td"><span class="s">PDF</span><span class="m">PDF only</span><span class="l">Download calculator results as a formatted PDF document — no other export options are available</span></div>
+                        <div class="td"><span class="s">PDF, CSV</span><span class="m">PDF and CSV</span><span class="l">Export your data as a clean PDF report or a structured CSV file ready for spreadsheet tools</span></div>
+                        <div class="td"><span class="s">All formats</span><span class="m">PDF, CSV, Excel, JSON</span><span class="l">Export in any format you need: PDF, CSV, Microsoft Excel (.xlsx), or raw JSON for developer and API use</span></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </body>
+</html>
