@@ -12,6 +12,34 @@ document.addEventListener('DOMContentLoaded', () => {
         cell.appendChild(div);
     });
 
+    function updateRowHeights() {
+        table.querySelectorAll('tbody tr').forEach(row => {
+            const faqCell = row.querySelector('.faq-cell');
+            const cellContents = row.querySelectorAll('.cell-content');
+            if (!faqCell || !cellContents.length) return;
+
+            const faqTbody = faqCell.querySelector('.faq-inner tbody');
+            const hasContent = faqTbody && faqTbody.children.length > 0;
+
+            if (hasContent) {
+                // faqCell.offsetHeight = actual rendered row height (all cells share it)
+                // subtract 16px for the 8px top+bottom padding on the other cells
+                const maxH = faqCell.offsetHeight - 16;
+                cellContents.forEach(div => div.style.maxHeight = maxH + 'px');
+            } else {
+                cellContents.forEach(div => div.style.maxHeight = '');
+            }
+        });
+    }
+
+    requestAnimationFrame(() => requestAnimationFrame(updateRowHeights));
+
+    table.addEventListener('input', (e) => {
+        if (e.target.closest('.faq-inner')) {
+            requestAnimationFrame(() => requestAnimationFrame(updateRowHeights));
+        }
+    });
+
     table.addEventListener('click', (e) => {
         const addBtn = e.target.closest('.add-faq-btn');
         if (addBtn) {
@@ -43,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contentRow.innerHTML = `<td class="faq-row-content" contenteditable="true" data-placeholder="Content ${count}"></td>`;
         tbody.appendChild(headerRow);
         tbody.appendChild(contentRow);
+        requestAnimationFrame(() => requestAnimationFrame(updateRowHeights));
     }
 
     function selectCell(cell) {
